@@ -9,7 +9,6 @@ namespace Calculator
 {
     class Program
     { 
-
         static void Main(string[] args)
         {
             CalcMethods MyCalc = new CalcMethods();
@@ -46,7 +45,7 @@ namespace Calculator
                     int MultiplyResult = MyCalc.Multiply(num1, num2);
                     break;
                 case "d":
-                    int PowerResult = MyCalc.Power(num1, num2);
+                    double PowerResult = MyCalc.Power(num1, num2);
                     break;
             }
             // Wait for the user to respond before closing.

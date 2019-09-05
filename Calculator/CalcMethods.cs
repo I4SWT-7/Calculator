@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Calculator
 {
-    class CalcMethods
+    public class CalcMethods
     {
         public int Add(int num1, int num2)
         {
@@ -24,9 +24,9 @@ namespace Calculator
             return num1 * num2;
         }
 
-        public int Power(int num1, int num2)
+        public double Power(int num1, int num2)
         {
-            return num1 ^ num2;
+            return Math.Pow(num1, num2);
         }
     }
 }

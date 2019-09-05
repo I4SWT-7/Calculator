@@ -38,8 +38,8 @@ namespace Calculator.Tests
             Assert.That(cal.Multiply(a, b), Is.EqualTo(c));
         }
 
-        [TestCase(1, 4, 4)]
-        [TestCase(5, 2, 10)]
+        [TestCase(1, 4, 1)]
+        [TestCase(5, 2, 25)]
         [TestCase(2, 1, 2)]
         public void PowerTest(int a, int b, int c)
         {
