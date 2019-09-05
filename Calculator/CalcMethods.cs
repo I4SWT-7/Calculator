@@ -28,6 +28,17 @@ namespace Calculator
         {
             return Math.Pow(num1, num2);
         }
+
+
+        public int Divide(int num1, int num2)
+        {
+            return num1 / num2;
+        }
+
+        public double squareroot(int num1)
+        {
+            return Math.Sqrt(num1);
+        }
     }
 }
 

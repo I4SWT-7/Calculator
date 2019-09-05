@@ -13,6 +13,7 @@ namespace Calculator.Tests
     {
         [TestCase(1, 2, 3)]
         [TestCase(3, 4, 7)]
+        [TestCase(4, 4, 8)]
         public void AddTest(int a, int b, int c)
         {
             CalcMethods cal = new CalcMethods();
@@ -46,6 +47,24 @@ namespace Calculator.Tests
         {
             CalcMethods cal = new CalcMethods();
             Assert.That(cal.Power(a, b), Is.EqualTo(c));
+        }
+
+        [TestCase(4, 2, 2)]
+        [TestCase(6, 3, 2)]
+        [TestCase(2, 1, 2)]
+        public void DivideTest(int a, int b, int c)
+        {
+            CalcMethods cal = new CalcMethods();
+            Assert.That(cal.Divide(a, b), Is.EqualTo(c));
+        }
+
+        [TestCase(9, 3)]
+        [TestCase(4, 2)]
+        [TestCase(25, 5)]
+        public void SquarerootTest(int a, int c)
+        {
+            CalcMethods cal = new CalcMethods();
+            Assert.That(cal.squareroot(a), Is.EqualTo(c));
         }
     }
 }

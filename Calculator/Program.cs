@@ -13,8 +13,11 @@ namespace Calculator
         {
             CalcMethods MyCalc = new CalcMethods();
             
+            while (true)
+            { 
             int num1 = 0;
             int num2 = 0;
+            double result = 0;
 
             Console.WriteLine("Welcome to Calculator\r");
             Console.WriteLine("---------------------\n");
@@ -29,29 +32,41 @@ namespace Calculator
             Console.WriteLine("\ta - Add");
             Console.WriteLine("\ts - Subtract");
             Console.WriteLine("\tm - Multiply");
-            Console.WriteLine("\td - Power");
+            Console.WriteLine("\tp - Power");
+            Console.WriteLine("\td - Divide");
+            Console.WriteLine("\tq - Squareroot");
+
             Console.Write("Your option? ");
 
             // Use a switch statement to do the math.
             switch (Console.ReadLine())
             {
                 case "a":
-                    int AddResult = MyCalc.Add(num1, num2);
+                     result = MyCalc.Add(num1, num2);
                     break;
                 case "s":
-                    int SubResult = MyCalc.Subtract(num1, num2);
+                    result = MyCalc.Subtract(num1, num2);
                     break;
                 case "m":
-                    int MultiplyResult = MyCalc.Multiply(num1, num2);
+                    result = MyCalc.Multiply(num1, num2);
+                    break;
+                case "p":
+                    result = MyCalc.Power(num1, num2);
                     break;
                 case "d":
-                    double PowerResult = MyCalc.Power(num1, num2);
+                    result = MyCalc.Divide(num1, num2);
+                    break;
+                case "q":
+                    result = MyCalc.squareroot(num1);
                     break;
             }
+
             // Wait for the user to respond before closing.
-            Console.Write("Press any key to close the Calculator console app... ");
+            Console.WriteLine(result);
+            Console.Write("Press any key to start over the Calculator console app... \n");
             Console.ReadKey();
         }
 
     }
+}
 }
