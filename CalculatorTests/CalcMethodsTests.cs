@@ -32,6 +32,7 @@ namespace Calculator.Tests
         [TestCase(1, 4, 4)]
         [TestCase(5, 2, 10)]
         [TestCase(2, 1, 2)]
+        [TestCase(3, 2, 6)]
         public void MultiplyTest(int a, int b, int c)
         {
             CalcMethods cal = new CalcMethods();
