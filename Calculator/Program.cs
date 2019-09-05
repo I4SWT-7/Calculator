@@ -8,9 +8,7 @@ using System.Threading.Tasks;
 namespace Calculator
 {
     class Program
-    {
-
-       
+    { 
 
         static void Main(string[] args)
         {
